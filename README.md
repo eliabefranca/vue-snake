@@ -15,4 +15,4 @@ npm run serve
 npm run build
 ```
 
-## [view live demo](https://codesandbox.io/s/github/Eliabe45/vue-snake)
+### You can play in the live demo [here](https://codesandbox.io/s/github/Eliabe45/vue-snake)
