@@ -1,0 +1,49 @@
+#app {
+  height: auto;
+  width: auto;
+  position: relative;
+  display: block;
+  margin: auto;
+  max-width: 500px;
+
+  #canvas {
+    height: 500px;
+    width: 500px;
+    background-color: rgba(0, 2, 2, 0.6);
+    position: relative;
+
+    .pixel {
+      float: left;
+      box-sizing: border-box;
+      width: 10px;
+      height: 10px;
+      text-align: center;
+      line-height: 50px;
+    }
+
+    .pixel--food,
+    .pixel--filled  {
+      background-color: #77DDFF;
+      box-shadow: 0 0 5px 0px #77DDFF;
+    }
+
+    .pixel--food {
+      animation: twink infinite 1s;
+      background: #FFCB6B;
+    }
+  }
+}
+
+@keyframes twink {
+  0% {
+    opacity: .2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: .2;
+  }
+}

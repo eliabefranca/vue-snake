@@ -1,0 +1,77 @@
+.game-menu {
+  height: 500px;
+  width: 500px;
+  background-color: rgba(0, 2, 2, 0.6);
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .game-options {
+    display: block;
+    width: 100%;
+  }
+
+  .game-over-text {
+    color: #FF4E5A;
+    font-size: 3rem;
+    margin-top: -1rem;
+    text-shadow: 0 0 5px #FF4E5A;
+  }
+
+  button {
+    font-family: 'Press Start 2P', cursive;
+    background: rgb(87, 221, 255);
+    border: none;
+    position: relative;
+    overflow: visible;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all .3s;
+    padding: 8px;
+
+    &:hover {
+      box-shadow: 0 0 5px 0 rgb(87, 221, 255);
+    }
+    
+    .border-top {
+      position: absolute;
+      top: -8px;
+      left: 2.5%;
+      display: block;
+      height: 8px;
+      width: 95%;
+      background: rgba(87, 221, 255, 0.438);
+    }
+
+    .border-bottom {
+      position: absolute;
+      bottom: -8px;
+      left: 2.5%;
+      display: block;
+      height: 8px;
+      width: 95%;
+      background: rgba(87, 221, 255, 0.438);
+    }
+
+    .border-left {
+      position: absolute;
+      bottom: 5%;
+      left: -8px;
+      display: block;
+      height: 90%;
+      width: 8px;
+      background: rgba(87, 221, 255, 0.438);
+    }
+
+    .border-right {
+      position: absolute;
+      bottom: 5%;
+      right: -8px;
+      display: block;
+      height: 90%;
+      width: 8px;
+      background: rgba(87, 221, 255, 0.438);
+    }
+  }
+}

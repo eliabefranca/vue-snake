@@ -1,28 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <h1>🐍 Snake Game 🐍</h1>
+    <Menu v-if="isAnewGame || gameOver" :game-over="gameOver" :new-game="newGame"/>
+    <Game v-else :end-game="endGame"/>
+  </div>  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Game from '@/views/Game'
+import Menu from '@/views/Menu'
+import '@/assets/styles/page.scss'
+
+
+import store from '@/store/index'
+import { mapState, mapMutations } from 'vuex'
 
 export default {
+  store,
+
+  computed: mapState(['gameOver','isAnewGame']),
+
+  methods: mapMutations(['newGame', 'endGame']),
+
   name: 'app',
   components: {
-    HelloWorld
+    Game, Menu
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
